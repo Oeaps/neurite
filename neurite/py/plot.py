@@ -219,6 +219,7 @@ def flow(slices_in,           # the 2D slices
         return inputs
 
     if img_indexing:
+        slices_in = slices_in.copy()
         for si, slc in enumerate(slices_in):
             slices_in[si] = np.flipud(slc)
 
